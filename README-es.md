@@ -52,13 +52,13 @@ Para más información, consulte la [documentación de TrueConf Room](https://tr
    **Windows:**
 
    ```sh
-   "C:\Program Files\TrueConf\Room\TrueConf Room.exe" -pin "some_pin"
+   "C:\Program Files\TrueConf\Room\TrueConfRoom.exe" --pin some_pin
    ```
 
    **Linux:**
 
    ```sh
-   trueconf-room --pin "some_pin"
+   trueconf-room --pin some_pin
    ```
 
 3. Ahora puede conectarse a TrueConf Room usando el siguiente ejemplo:

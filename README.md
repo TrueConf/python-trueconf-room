@@ -50,13 +50,13 @@
    **Windows:**
 
    ```sh
-   "C:\Program Files\TrueConf\Room\TrueConf Room.exe" -pin "some_pin"
+   "C:\Program Files\TrueConf\Room\TrueConfRoom.exe" --pin some_pin
    ```
 
    **Linux:**
 
    ```sh
-   trueconf-room --pin "some_pin"
+   trueconf-room --pin some_pin
    ```
 
 3. You can now connect to TrueConf Room using the following example:
