@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 name = "python-trueconf-room"
 dynamic = ["version"]
 description = "A Python library for the TrueConf Room API"
-readme = {file = "README.md", content-type = "text/markdown"}
+readme = {file = "README-PyPI.md", content-type = "text/markdown"}
 requires-python = ">=3.9"
 license = "BSD-3-Clause-Clear"
 license-files = ["LICENSE*"]
