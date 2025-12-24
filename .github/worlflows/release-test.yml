@@ -1,0 +1,45 @@
+name: Release to TestPyPI
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release (e.g. v1.2.3 or v1.2.3rc1)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish-to-testpypi:
+    runs-on: ubuntu-latest
+    environment: testpypi
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          ref: ${{ github.event.inputs.tag }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Build package
+        run: |
+          pip install build
+          python -m build
+
+      - name: Check dist metadata
+        run: |
+          pip install twine
+          twine check dist/*
+
+      - name: Publish package to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          verbose: true

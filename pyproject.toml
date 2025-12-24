@@ -1,0 +1,57 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm>=7.2.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-trueconf-room"
+dynamic = ["version"]
+description = "A Python library for the TrueConf Room API"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.9"
+license = "BSD-3-Clause-Clear"
+license-files = ["LICENSE*"]
+authors = [
+    { name = "TrueConf LLC", email = "info@trueconf.com" },
+    { name = "Andrey Zobov", email = "azobov@trueconf.com" }
+]
+
+keywords = [
+    "trueconf",
+    "room",
+    "api",
+    "framework",
+    "wrapper",
+    "websocket"
+]
+
+classifiers = [
+    "Development Status :: 5 - Release",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "websocket-client==0.58",
+    "requests"
+]
+
+[tool.setuptools]
+packages = ["trueconf_room"]
+
+[project.urls]
+Homepage = "https://github.com/TrueConf/python-trueconf-room"
+Repository = "https://github.com/TrueConf/python-trueconf-room"
+Documentation = "https://trueconf.com/docs/videosdk/en/introduction/common"
+Issues = "https://github.com/TrueConf/python-trueconf-room/issues"
+
+[tool.setuptools_scm]
+version_file = "trueconf_room/_version.py"
+version_scheme = "guess-next-dev"
+local_scheme = "no-local-version"

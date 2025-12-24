@@ -1,0 +1,36 @@
+"""
+Example:
+  1. Connect to TrueConf Server.
+  2. Authorize on the server.
+"""
+
+import trueconf_room
+from trueconf_room.methods import Methods
+from trueconf_room.consts import EVENT, METHOD_RESPONSE
+import trueconf_room.consts as C
+import config
+
+print(__doc__)
+
+TRUECONF_SERVER = "<Server IP>"
+TRUECONF_ID = "<trueconf_id>"
+PASSWORD = "<password>"
+
+room = trueconf_room.open_session(ip = config.IP, port = config.PORT, pin = config.PIN, debug = config.DEBUG)
+methods = Methods(room)
+
+@room.handler(EVENT[C.EV_appStateChanged])
+@room.handler(METHOD_RESPONSE[C.M_getAppState])
+def on_state_change(response):
+    print(f'    Application state is {response["appState"]}')
+    # Need to login
+    if response["appState"] == 2:
+        methods.login(TRUECONF_ID, PASSWORD)
+    elif response["appState"] == 3:
+        # Create a new conference when it's possible: appState is 3
+        methods.createConference("My conference title", C.CONFTYPE_symmetric, True, ["kiosk2", "kiosk3"])
+
+if __name__ == '__main__':
+    # Try to connect to TrueConf Server
+    methods.connectToServer(TRUECONF_SERVER)
+    room.run()
