@@ -179,4 +179,4 @@ room.run()
 2. [Примеры кода](examples/):
    1. [Общие примеры](examples/)
    2. [Кнопка вызова с использованием PyQT5](examples/CallButton/)
-   3. [Голосовое управление TrueConf Room с помощью Vosk](https://github.com/TrueConf/pyVideoSDK-VoiceControl) 
+   3. [Голосовое управление TrueConf Room с помощью Vosk](https://github.com/TrueConf/trueconf-room-voice-control)

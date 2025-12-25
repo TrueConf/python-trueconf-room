@@ -177,4 +177,4 @@ room.run()
 
    1. [General examples](https://github.com/TrueConf/python-trueconf-room/blob/master/examples/)
    2. [Call button using PyQt5](https://github.com/TrueConf/python-trueconf-room/blob/master/examples/CallButton/)
-   3. [TrueConf Room voice control with Vosk](https://github.com/TrueConf/pyVideoSDK-VoiceControl)
+   3. [TrueConf Room voice control with Vosk](https://github.com/TrueConf/trueconf-room-voice-control)

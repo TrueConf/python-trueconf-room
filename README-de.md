@@ -180,4 +180,4 @@ room.run()
 
    1. [Allgemeine Beispiele](https://github.com/TrueConf/python-trueconf-room/blob/main/examples/)
    2. [Anruf-Button mit PyQt5](https://github.com/TrueConf/python-trueconf-room/blob/main/examples/CallButton/)
-   3. [Sprachsteuerung von TrueConf Room mit Vosk](https://github.com/TrueConf/pyVideoSDK-VoiceControl)
+   3. [Sprachsteuerung von TrueConf Room mit Vosk](https://github.com/TrueConf/trueconf-room-voice-control)
